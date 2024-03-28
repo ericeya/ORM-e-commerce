@@ -38,6 +38,8 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// creating many to many relational data requires additional attribute of "tagIds" to be passed into req.body.
+// Then in the function below, with bulkCreate function, product_tag relational data is created.
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
